@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -26,6 +28,35 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.card-sub {
+  width: 40%;
+  border: 1px solid black;
+  border-radius: 12px;
+  margin: 12px auto;
+  background-color: rgb(189, 231, 217);
+}
+
+.card-sub img {
+  border: 3px solid rgb(38, 133, 74);
+  border-radius: 12px;
+}
+
+.form-div {
+  width: 25%;
+  margin: 12px auto;
+}
+.form-div form {
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+.form-div form input {
+  margin: 3px;
+}
+.form-div form button {
+  margin: 3px;
 }
 
 @keyframes App-logo-spin {
