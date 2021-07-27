@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import List from "./components/List";
 import FormSubs from "./components/Form";
+import { Sub } from "./types/types";
 
 const INITIAL_STATE = [
   {
@@ -15,13 +16,20 @@ const INITIAL_STATE = [
     desc: "Data Scientist Expert",
   },
 ];
+interface AppState {
+  subs: Array<Sub>;
+}
 
 function App() {
+  const [subs, setSubs] = useState<AppState["subs"]>(INITIAL_STATE);
+
+  useEffect(() => {}, [subs]);
+
   return (
     <div className='App'>
       <h1>Subs List</h1>
-      <List subsc={INITIAL_STATE} />
-      <FormSubs />
+      <List subsc={subs} />
+      <FormSubs onNewSub={setSubs} subs={subs} />
     </div>
   );
 }
