@@ -28,7 +28,7 @@ function App() {
   return (
     <div className='App'>
       <h1>Subs List</h1>
-      <List subsc={subs} />
+      <List subsc={subs} setSubs={setSubs} />
       <FormSubs onNewSub={setSubs} subs={subs} />
     </div>
   );

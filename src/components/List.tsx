@@ -4,9 +4,14 @@ import { Sub } from "../types/types";
 
 interface Props {
   subsc: Array<Sub>;
+  setSubs: React.Dispatch<React.SetStateAction<Sub[]>>;
 }
 
-const List = ({ subsc }: Props) => {
+const List = ({ subsc, setSubs }: Props) => {
+  const deleteSub = () => {
+    console.log(subsc);
+  };
+
   return (
     <div>
       {subsc.map((sub) => {
