@@ -8,14 +8,10 @@ interface Props {
 }
 
 const List = ({ subsc, setSubs }: Props) => {
-  const deleteSub = () => {
-    console.log(subsc);
-  };
-
   return (
     <div>
       {subsc.map((sub) => {
-        return <Card sub={sub} />;
+        return <Card sub={sub} setSubs={setSubs} subsc={subsc} />;
       })}
     </div>
   );

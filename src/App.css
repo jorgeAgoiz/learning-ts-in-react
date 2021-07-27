@@ -42,6 +42,13 @@
   border: 3px solid rgb(38, 133, 74);
   border-radius: 12px;
 }
+.card-sub button {
+  width: 40%;
+  height: 25px;
+  margin: 10px;
+  border: 3px solid black;
+  cursor: pointer;
+}
 
 .form-div {
   width: 25%;
